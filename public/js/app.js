@@ -9,7 +9,7 @@ const messageTwo = document.querySelector('#message-2')
 weatherform.addEventListener('submit', (e)=>{
     e.preventDefault()
 
-    const location = search.value
+    const location = gitsearch.value
     messageTwo.textContent = 'Loading...'
     fetch('/weather?address=' + location).then((response)=>{
     response.json().then((data)=>{
