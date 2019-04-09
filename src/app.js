@@ -1,4 +1,3 @@
-const chalk  = require('chalk');
 const  express = require('express');
 const path =require('path');
 const hbs = require('hbs')
@@ -13,6 +12,7 @@ const viewsPath = path.join(__dirname, '../templates/views')
 const publicDirPath = path.join(__dirname, '../public')
 const partialsPath = path.join(__dirname, '../templates/partials')
 
+//const port  = process.env.port || 3000
 const port  = process.env.PORT || 3000
 
 //setup handle bars  and view locati
@@ -111,5 +111,5 @@ app.get('*', (req, res)=>{
 
 
 app.listen(port, ()=>{
-    console.log(chalk.magenta('Starting up server on port ' + port));
+    console.log('Starting up server on port ' + port);
 })
