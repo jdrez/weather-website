@@ -12,6 +12,9 @@ const app = express()
 const viewsPath = path.join(__dirname, '../templates/views')
 const publicDirPath = path.join(__dirname, '../public')
 const partialsPath = path.join(__dirname, '../templates/partials')
+
+const port  = process.env.PORT || 3000
+
 //setup handle bars  and view locati
 app.set('view engine','hbs')
 app.set('views', viewsPath)
@@ -107,6 +110,6 @@ app.get('*', (req, res)=>{
 
 
 
-app.listen(3000, ()=>{
-    console.log(chalk.magenta('Starting up server on port 3000'));
+app.listen(port, ()=>{
+    console.log(chalk.magenta('Starting up server on port ' + port));
 })
